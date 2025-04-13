@@ -1,4 +1,6 @@
 # Orange-GeothermalData-ROP_Monitoring
+<img width="717" alt="image" src="https://github.com/user-attachments/assets/8e3b3478-af87-4674-aec4-7bc0512038ea" />
+
 Using Orange Data Miner to analyze Geothermal Data in Utah Forge and monitor Rate of Penetration performance.
 Target ROP to determine the efficiency of geothermal drilling and provide insight into future drilling activities for the enhanced geothermal project of Utah FORGE
 This is a one foot interval drilling dataset for well 58-32 that covers from 85.18 feet to 7536.25 feet in depth (which is TD). It contains information such as depth, rate of penetration, weight on bit, hookload, temperature in and out, pump pressure, flow in and out, and H2S etc.
