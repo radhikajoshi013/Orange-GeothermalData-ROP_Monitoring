@@ -8,9 +8,11 @@ Using Orange Data Miner to analyze Geothermal Data in Utah Forge and monitor Rat
 The U.S. Department of Energy's (U.S. DOE) Frontier Observatory for Research in Geothermal Energy (FORGE). Drilling and log data for well 58-32 (https://gdr.openei.org/submissions/1006)
 
 ## Data Description: 
-This is a one foot interval drilling dataset for well 58-32 that covers from 85.18 feet to 7536.25 feet in depth (which is TD). It contains information such as depth, rate of penetration, weight on bit, hookload, temperature in and out, pump pressure, flow in and out, and H2S etc. 7313 instances, 19 features (73% missing data), No target variable, 14 meta attributes (0% missing data)
+This is a one foot interval drilling dataset for well 58-32 that covers from 85.18 feet to 7536.25 feet in depth (which is TD). It contains information such as depth, rate of penetration (ROP), weight on bit, hookload, temperature in and out, pump pressure, flow in and out, and H2S etc. 7313 instances, 19 features (73% missing data), 14 meta attributes (0% missing data).
 
 ## Modelling Process:
+Since the target variable (Rate of Penetration) was a continuous numeric variable, three different algorithms were tried to find out the best results: kNN, Random Forests and Linear Regression. 
+
 <li>Feature Selection: From conventional drilling we know that there is a direct relation between WOB, RPM, Torque, Pump Pressure and Depth to ROP. narrowed it down to these features. The ROP(1 ft) is considered as target variable.
   
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/ad6793eb-14d5-4a19-bcf8-b59fb5684689"/></li>
@@ -40,8 +42,12 @@ This residual analysis models knn versus knn error. It indicates that lower dept
 <img width="550" alt="image" src="https://github.com/user-attachments/assets/28a29e00-b04a-4c96-ae58-4d3d9bc54908" />
 
 ## Limitations/Challenges:
-Checking End of Well Reports and Well logs to correlate with missing data.
+Since there was a lot of missing data (73%), End of Well Reports and Well logs needed to be checked to correlate with missing data. It was found that certain sections of the subsurface had missing data and this information from the reports was used to filter out records from that sub-surface strata in the pre-processing stage.
 
 ## Insights:  
-The kNN model can thus be used to predict ROP based on new input data for the predictor variables. This is useful for planning and optimizing drilling operations.
+
+<li> Predictive Analysis: The kNN model for Rate of Penetration in geothermal wells can thus be used to predict ROP based on new input data for the predictor variables, and enhance ROP in future wells.
+<li> Cost Optimization: Optimize the k-NN model to identify the best operational parameters, like WOB and RPM, for optimal ROP, lowering drilling costs and boosting project profitability.
+<li> Performance Monitoring: Monitor performance by comparing predicted and actual ROP, analyzing discrepancies to refine drilling practices.</li>
+
 
