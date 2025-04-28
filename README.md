@@ -11,7 +11,7 @@ The U.S. Department of Energy's (U.S. DOE) Frontier Observatory for Research in 
 This is a one foot interval drilling dataset for well 58-32 that covers from 85.18 feet to 7536.25 feet in depth (which is TD). It contains information such as depth, rate of penetration (ROP), weight on bit, hookload, temperature in and out, pump pressure, flow in and out, and H2S etc. 7313 instances, 19 features (73% missing data), 14 meta attributes (0% missing data).
 
 ## Modelling Process:
-Since the target variable (Rate of Penetration) was a continuous numeric variable, three different algorithms were tried to find out the best results: kNN, Random Forests and Linear Regression. 
+Since the target variable (Rate of Penetration) was a continuous numeric variable, three different algorithms were tried to find out the best results: starting with Linear Regression since it is the simplest and most intuitive, followed with kNN and Random Forests.
 
 <li>Feature Selection: From conventional drilling we know that there is a direct relation between WOB, RPM, Torque, Pump Pressure and Depth to ROP. narrowed it down to these features. The ROP(1 ft) is considered as target variable.
   
